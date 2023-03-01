@@ -1,0 +1,31 @@
+body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    /*Я теперь когда исправил попаду вместо єтого разработчика в гугл?*/
+    background-color: #333;
+}
+
+.content {
+    padding: 20px 0px;
+    font-size: 18px;
+    width: 500px;
+    margin: auto;
+    color: #fff;
+}
+
+.arrow {
+    color: red;
+    /* Вам нужно установить определенное позиционирование стрелочке, которое при прокрутке страницы не меняло свое положение! */
+    position: fixed;
+    top: 50%;
+    transform: translate(0px, -50%);
+    right: 20%;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    border: 1px solid red;
+}
