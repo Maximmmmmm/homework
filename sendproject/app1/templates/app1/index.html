@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "{% static 'app1/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="main__body">
+            <h1 class="main__title">Відправити повідомлення</h1>
+            <form class="main__form" action="" method='POST'>
+                {% csrf_token %}
+                <input class="main__input" type="text" placeholder="Тема" name="topic">
+                <input class="main__input" type="text" placeholder="Повідомлення" name="message">
+                <input class="main__input" type="email" placeholder="Отримувач" name="recipient">
+                <button class="main__button">Відправити</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
