@@ -1,0 +1,40 @@
+* {
+    /* Почему не добавили box-sizing: border-box? */
+    padding: 0;
+    margin: 0;
+}
+html, body {
+    /* vh - это... */
+    height: 100vh;
+}
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction - это ... */
+    flex-direction: column;
+}
+.maze-field {
+    width: 475px;
+    height: 500px;
+    border: 5px solid black; 
+    /* Почему мы ставим position: relative? */
+    position: relative;
+}
+
+#player {
+    width: 25px;
+    height: 25px;
+    background-color: green;
+    /* Почему мы ставим position: absolute? */
+    position: absolute;
+}
+
+.wall {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: black;
+}
