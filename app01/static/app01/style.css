@@ -1,0 +1,30 @@
+body{
+    background-color: rgb(180, 245, 245);
+    width: 100%;
+    height: 100%;
+    /* display: flex;
+    flex-direction: row; */
+}
+
+hr{
+    background-color: lightcoral;
+    width: 100%;
+}
+
+.list-transport{
+    border: 2 solid lightcoral;
+    border-radius: 5px;
+}
+
+h1{
+    font-size: 20px;
+    color: coral;
+}
+
+.checkboxes{
+    border: 2px solid lightsalmon;
+    border-radius: 5px;
+    background-color: rgb(247, 201, 169);
+    width: 300px;
+    height: 150px;
+}

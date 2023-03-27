@@ -1,0 +1,30 @@
+<html lang="en"> 
+    <head>
+        {% load static %}
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>COOL_CATEGORY_PAGE</title>
+        <link rel="stylesheet" href="{% static 'app01/style.css' %}">
+    </head>
+    <body>
+        <input id="url" value="{% url 'transport_url' %}" hidden>
+        <div class="list-transport">
+            {% for transport in transport_list %}
+                <img src="{{ transport.image.url }} " style = "max-height:400px;">
+                <h2>{{ transport.name }}</h2>
+                <hr>
+                <br>
+                <br>
+            {% endfor %}
+        </div>
+        <div class="checkboxes">
+            {% for category in category_list %}
+                <p><input class="checkbox" type="checkbox" value="{{ category.name }}">{{ category.name }}</p>
+            {% endfor %}
+        </div>
+        <script src = '{% static "app01/jquery-3.6.4.js" %}'></script>
+        <script src = '{% static "app01/ajax.js" %}'></script>
+    </body>
+</html>
+
