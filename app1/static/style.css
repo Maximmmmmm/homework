@@ -1,0 +1,33 @@
+.head-block{
+    background-color: orange;
+    color: white;
+    border-radius: 20px;
+    
+}
+
+
+img{
+    height: 300px;
+    width:400px;
+    align-items: center;
+    
+}
+
+.list-product{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 41px;
+
+
+}
+
+.product-card{
+    background-color: greenyellow;
+    align-items: center;
+    border-radius: 20px;
+    margin-left: 50px;
+    width: 400px;
+    height: auto;
+    padding: 20px;
+}
