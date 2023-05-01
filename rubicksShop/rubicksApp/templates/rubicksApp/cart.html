@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% load static %}
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cart</title>
+	<link rel="stylesheet" href="{% static 'rubicksApp/catalog.css' %}">
+</head>
+<body>
+	<input id="cartUrl" value="{% url 'cart_url' %}" hidden>
+	<header class="header">
+		<a href="{% url 'catalog_url' %}" class="header__logo">
+			<img src="{% static 'rubicksApp/icons/1.png' %}" alt="logo">
+			RubickShop
+		</a>
+		<nav class="header__menu menu">
+			<a href="" class="menu__catalog">Catalog</a>
+			<a href="" class="menu__cart"><img src="{% static 'rubicksApp/icons/2.png' %}" alt="cart"></a>
+			<button class="menu__burger"><span></span></button>
+		</nav>
+	</header>
+	<main class="main">
+		<div class="main__cart cart">
+			<div class="cart__container">
+				{% if products %}
+				{% for product in products %}
+				<div class="cart__product product">
+					<a href="" class="product__image">
+						<img src="{{ product.image.url }}" alt="">
+					</a>
+					<a href="" class="product__title">{{ product.name }}</a>
+					<div class="product__description">{{ product.description }}</div>
+					<div class="product__price">{{ product.price }} UAH</div>
+					<form class="deleteFromCart" method="POST">
+						<button id="RemoveFromBasket" value="${{ product.pk }}" class="product__button">Delete</button>
+					</form>
+				</div>
+				{% endfor %}
+				{% else %}
+				<div class="cart__status">Корзина пуста.</div>
+				{% endif %}
+			</div>
+		</div>
+	</main>
+	<script src="{% static 'rubicksApp/jquery-3.6.4.js' %}"></script>
+	<script src="{% static 'rubicksApp/ajax.js' %}"></script>
+</body>
+</html>
